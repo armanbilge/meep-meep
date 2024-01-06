@@ -12,7 +12,7 @@ ThisBuild / tlJdkRelease := Some(11)
 
 ThisBuild / scalacOptions ++= Seq("-new-syntax", "-no-indent", "-source:future")
 
-lazy val root = tlCrossRootProject.aggregate(core, compilerPlugin)
+lazy val root = tlCrossRootProject.aggregate(core, compilerPlugin, tests)
 
 lazy val compilerPlugin = project
   .in(file("compiler-plugin"))
