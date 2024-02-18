@@ -32,6 +32,11 @@ lazy val core = crossProject(JVMPlatform, JSPlatform, NativePlatform)
     enableCompilerPlugin
   )
 
+lazy val runtime = crossProject(JVMPlatform, JSPlatform, NativePlatform)
+  .settings(
+    name := "meep-meep-runtime"
+  )
+
 lazy val tests = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   .enablePlugins(NoPublishPlugin)
   .dependsOn(core)
