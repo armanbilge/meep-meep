@@ -17,7 +17,7 @@
 package meep.meep.runtime
 
 abstract class Coro {
-  
+
   def run(runtime: Runtime, state: Int): Int
 
   def runStolen(runtime: Runtime, state: Int): Int
