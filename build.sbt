@@ -18,4 +18,3 @@ lazy val runtime = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   .settings(
     name := "meep-meep-runtime"
   )
-
