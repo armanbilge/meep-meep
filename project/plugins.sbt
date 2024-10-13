@@ -1,4 +1,4 @@
-addSbtPlugin("org.typelevel" % "sbt-typelevel" % "0.6.3")
-addSbtPlugin("org.typelevel" % "sbt-typelevel-scalafix" % "0.6.3")
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.14.0")
-addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.4.16")
+addSbtPlugin("org.typelevel" % "sbt-typelevel" % "0.7.4")
+addSbtPlugin("org.typelevel" % "sbt-typelevel-scalafix" % "0.7.4")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.17.0")
+addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.5.5")
