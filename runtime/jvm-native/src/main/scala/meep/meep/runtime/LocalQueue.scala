@@ -16,24 +16,13 @@
 
 package meep.meep.runtime
 
-abstract class Runtime private[runtime] {
-
-  def schedule(coro: Coro, state: Int): Unit
-
-  def sleep(nanos: Long, coro: Coro, state: Int): CancelToken
-
-  def cancelSleep(token: CancelToken): Unit
-
-  def poller(): AnyRef
-
-  def pleaseYield(): Boolean
-
-  def prepareForBlocking(): Boolean
-
-  def startCompute(): Unit
-
-  def endCompute(): Unit
+private final class LocalQueue {
+  private val coros: Array[Coro] = new Array(Capacity)
 
 }
 
-abstract class CancelToken private[runtime] ()
+private object LocalQueue {
+
+  final val Capacity = 256
+
+}

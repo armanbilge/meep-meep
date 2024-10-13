@@ -16,24 +16,8 @@
 
 package meep.meep.runtime
 
-abstract class Runtime private[runtime] {
+abstract class Coro {
+  def run(runtime: Runtime, state: Int): Int
 
-  def schedule(coro: Coro, state: Int): Unit
-
-  def sleep(nanos: Long, coro: Coro, state: Int): CancelToken
-
-  def cancelSleep(token: CancelToken): Unit
-
-  def poller(): AnyRef
-
-  def pleaseYield(): Boolean
-
-  def prepareForBlocking(): Boolean
-
-  def startCompute(): Unit
-
-  def endCompute(): Unit
-
+  def runStolen(runtime: Runtime, state: Int): Int
 }
-
-abstract class CancelToken private[runtime] ()
